@@ -57,13 +57,13 @@ PROGRAM NonlinearPoissonEquation
   TYPE(cmfe_DecomposerType) :: decomposer
   TYPE(cmfe_EquationsType) :: equations
   TYPE(cmfe_EquationsSetType) :: equationsSet
-  TYPE(cmfe_FieldType) :: analyticField,equationsSetField,geometricField,dependentField,materialsField
+  TYPE(cmfe_FieldType) :: analyticField,dependentField,equationsSetField,geometricField,materialsField
   TYPE(cmfe_FieldsType) :: fields
   TYPE(cmfe_GeneratedMeshType) :: generatedMesh
   TYPE(cmfe_MeshType) :: mesh
   TYPE(cmfe_ProblemType) :: problem
   TYPE(cmfe_RegionType) :: region,worldRegion
-  TYPE(cmfe_SolverType) :: solver,linearSolver
+  TYPE(cmfe_SolverType) :: linearSolver,solver
   TYPE(cmfe_SolverEquationsType) :: solverEquations
   TYPE(cmfe_WorkGroupType) :: worldWorkGroup
 
