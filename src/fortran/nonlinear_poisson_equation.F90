@@ -530,7 +530,7 @@ PROGRAM NonlinearPoissonEquation
         !Left side
         nodeNumber=1+(yNodeIdx-1)*numberOfGlobalXNodes+(zNodeIdx-1)*numberOfGlobalXNodes*numberOfGlobalYNodes
         !Check what computational node the node is on
-        CALL OC_Decomposition_NodeDomainGet(decomposition,nodeNumber,1,nodeDomain,err)
+        CALL OC_Decomposition_NodeDomainGet(decomposition,1,nodeNumber,nodeDomain,err)
         IF(nodeDomain==computationalNodeNumber) THEN
           !If the node is on my computational node then set left hand side BC to 0.0
           CALL OC_BoundaryConditions_SetNode(boundaryConditions,dependentField,OC_FIELD_U_VARIABLE_TYPE,1,1,nodeNumber,1, &
@@ -539,7 +539,7 @@ PROGRAM NonlinearPoissonEquation
         !Right side
         nodeNumber=numberOfGlobalXNodes+(yNodeIdx-1)*numberOfGlobalXNodes+(zNodeIdx-1)*numberOfGlobalXNodes*numberOfGlobalYNodes
         !Check what computational node the node is on
-        CALL OC_Decomposition_NodeDomainGet(decomposition,nodeNumber,1,nodeDomain,err)
+        CALL OC_Decomposition_NodeDomainGet(decomposition,1,nodeNumber,nodeDomain,err)
         IF(nodeDomain==computationalNodeNumber) THEN
           !If the node is on my computational node then set left hand side BC to 0.0
           CALL OC_BoundaryConditions_SetNode(boundaryConditions,dependentField,OC_FIELD_U_VARIABLE_TYPE,1,1,nodeNumber,1, &
