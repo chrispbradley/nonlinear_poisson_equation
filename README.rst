@@ -68,9 +68,10 @@ Building the example
 The fortran version of the example can be configured and built with CMake::
 
   git clone https://github.com/OpenCMISS-Examples/nonlinear_poisson_equation
-  mkdir nonlinear_poisson_equation-build
-  cd nonlinear_poisson_equation-build
-  cmake -DOpenCMISSLibs_DIR=/path/to/opencmisslib/install ../nonlinear_poisson_equation
+  cd nonlinear_poisson_equation
+  mkdir build
+  cd build
+  cmake -DOpenCMISS_INSTALL_ROOT=/path/to/opencmiss/install ../.
   make
 
 This will create the example executable "nonlinear_poisson_equation" in ./src/fortran/ directory.
